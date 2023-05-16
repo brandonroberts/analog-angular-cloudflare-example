@@ -9,10 +9,23 @@ export default defineConfig(({ mode }) => ({
   build: {
     target: ['es2020'],
   },
+  ssr: {
+    noExternal: ['xhr2']
+  },
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog()],
+  plugins: [analog(), {
+    name: 'test',
+    transform(code) {
+      if (code.includes('os.type()')) {
+        return {
+          code: code.replace('os.type()', `''`).replace('os.arch()', `''`)
+        }
+      }
+      return;
+    }
+   }],
   test: {
     globals: true,
     environment: 'jsdom',
@@ -21,5 +34,7 @@ export default defineConfig(({ mode }) => ({
   },
   define: {
     'import.meta.vitest': mode !== 'production',
+    'process.versions.node': `'node'`,
+    'process.versions.v8': `'v8'`
   },
 }));
