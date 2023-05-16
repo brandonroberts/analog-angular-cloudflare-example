@@ -9,10 +9,9 @@
     "dev": "npx -p @miniflare/tre@3.0.0-next.13 -p wrangler@0.0.0-d8f8f3d2 wrangler dev --compatibility-date=2021-09-20 --experimental-local",
     "ng": "ng",
     "start": "npm run dev",
-    "build": "ng build && npm run process",
+    "build": "ng build",
     "watch": "ng build --watch",
-    "test": "ng test",
-    "process": "node ./tools/copy-worker-files.mjs && node ./tools/copy-client-files.mjs && node ./tools/bundle.mjs"
+    "test": "ng test"
   },
   "dependencies": {
     "@analogjs/content": "^0.2.0-beta.7",
