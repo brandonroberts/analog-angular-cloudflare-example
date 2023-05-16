@@ -1,22 +1,24 @@
 # Analog App
 
+An example of Analog + Angular running on Cloudflare workers
+
 This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
 
 ## Setup
 
-Run `yarn` to install the application dependencies.
-
-## Development
-
-Run `yarn dev` for a dev server. Navigate to `http://localhost:5173/`. The application will automatically reload if you change any of the source files.
+Run `npm install` to install the application dependencies.
 
 ## Build
 
-Run `yarn build` to build the client/server project. The client build artifacts are located in the `dist/client` directory. The server for the API build artifacts are located in the `dist/server` directory.
+Run `npm run build` to build the client/server project. The client build artifacts are located in the `dist/analog/public` directory. The server for the API build artifacts are located in the `dist/analog/server` directory.
+
+## Development
+
+Run `npm run dev` to start the Cloudflare server. Navigate to the provided URL in the command line.
 
 ## Test
 
-Run `yarn test` to run unit tests with [Vitest](https://vitest.dev).
+Run `npm run test` to run unit tests with [Vitest](https://vitest.dev).
 
 ## Community
 
