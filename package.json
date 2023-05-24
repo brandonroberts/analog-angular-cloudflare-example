@@ -9,7 +9,7 @@
     "dev": "npx -p @miniflare/tre@3.0.0-next.13 -p wrangler@0.0.0-d8f8f3d2 wrangler dev --compatibility-date=2021-09-20 --experimental-local",
     "ng": "ng",
     "start": "npm run dev",
-    "build": "ng build",
+    "build": "NITRO_PRESET=cloudflare ng build",
     "watch": "ng build --watch",
     "test": "ng test"
   },
