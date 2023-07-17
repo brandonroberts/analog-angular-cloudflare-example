@@ -15,14 +15,30 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog(), {
-    name: 'test',
-    transform(code) {
-      if (code.includes('os.type()')) {
-        return {
-          code: code.replace('os.type()', `''`).replace('os.arch()', `''`)
+  plugins: [
+    analog(),
+    {
+      name: 'test',
+      transform(code, id) {
+        if (code.includes('os.type()')) {
+          return {
+            code: code.replace('os.type()', `''`).replace('os.arch()', `''`)
+          }
         }
+        return;
       }
+    },
+    {
+      name: 'global',
+      transform(code, id) {
+        if (code.includes('global') && id.includes('platform-server.mjs')) {
+          return {
+            code: code
+              .replaceAll('global.', 'globalThis.')
+              .replaceAll('global,', 'globalThis,')
+              .replaceAll(' global[', ' globalThis[')
+          };
+        }
       return;
     }
    }],

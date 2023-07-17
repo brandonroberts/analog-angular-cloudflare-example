@@ -10,11 +10,17 @@ Run `npm install` to install the application dependencies.
 
 ## Build
 
+Rename the `.env.example` to `.env` before building to run locally.
+
 Run `npm run build` to build the client/server project. The client build artifacts are located in the `dist/analog/public` directory. The server for the API build artifacts are located in the `dist/analog/server` directory.
 
 ## Development
 
 Run `npm run dev` to start the Cloudflare server. Navigate to the provided URL in the command line.
+
+## Publish
+
+Run `npm run publish` to publish to Cloudflare using wrangler.
 
 ## Test
 

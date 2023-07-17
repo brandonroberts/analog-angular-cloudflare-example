@@ -2,7 +2,6 @@ name = "playground"
 main = "./dist/analog/server/index.mjs"
 workers_dev = true
 compatibility_date = "2021-09-20"
-account_id = "8c73463f0a2cd265161c7a9fafc32cdc"
 
 [site]
 bucket = "dist/analog/public"
