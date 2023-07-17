@@ -10,6 +10,6 @@ export const appConfig: ApplicationConfig = {
     provideFileRouter(withNavigationErrorHandler(console.log)),
     provideHttpClient(),
     provideClientHydration(),
-    { provide: APP_BASE_HREF, useValue: import.meta.env['VITE_APP_BASE_URL'] }
+    { provide: APP_BASE_HREF, useValue: import.meta.env['VITE_APP_BASE_URL'] || '/' }
   ],
 };

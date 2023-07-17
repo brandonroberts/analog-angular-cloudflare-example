@@ -1,4 +1,4 @@
-name = "playground"
+name = "example"
 main = "./dist/analog/server/index.mjs"
 workers_dev = true
 compatibility_date = "2021-09-20"
