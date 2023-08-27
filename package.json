@@ -18,8 +18,8 @@
     "publish:pages": "npx wrangler pages publish ./dist/analog/public"
   },
   "dependencies": {
-    "@analogjs/content": "^0.2.0-beta.25",
-    "@analogjs/router": "^0.2.0-beta.25",
+    "@analogjs/content": "^0.2.0",
+    "@analogjs/router": "^0.2.0",
     "@angular/animations": "^16.2.2",
     "@angular/common": "^16.2.2",
     "@angular/compiler": "^16.2.2",
@@ -29,18 +29,19 @@
     "@angular/platform-browser-dynamic": "^16.2.2",
     "@angular/platform-server": "^16.2.2",
     "@angular/router": "^16.2.2",
-    "@nx/angular": "^16.1.0",
+    "@nx/angular": "^16.7.2",
     "front-matter": "^4.0.2",
     "marked": "^5.0.2",
     "marked-gfm-heading-id": "^3.0.4",
     "marked-highlight": "^2.0.1",
+    "mermaid": "^10.4.0",
     "prismjs": "^1.29.0",
     "rxjs": "~7.5.6",
     "tslib": "^2.4.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@analogjs/platform": "^0.2.0-beta.25",
+    "@analogjs/platform": "^0.2.0",
     "@angular-devkit/build-angular": "^16.2.0",
     "@angular/cli": "^16.2.0",
     "@angular/compiler-cli": "^16.2.2",
@@ -48,11 +49,11 @@
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@miniflare/tre": "^3.0.0-next.13",
-    "@nx/vite": "^16.5.0",
+    "@nx/vite": "^16.7.2",
     "jsdom": "^20.0.0",
-    "nx": "^16.5.0",
+    "nx": "^16.7.2",
     "typescript": "~5.0.2",
-    "vite": "^4.3.9",
+    "vite": "^4.4.8",
     "vitest": "^0.32.0"
   }
 }
